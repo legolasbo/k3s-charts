@@ -1,0 +1,10 @@
+---
+apiVersion: v1
+metadata:
+  name: {{ .Release.Name }}
+kind: ConfigMap
+data:
+  mosquitto.conf: |
+    allow_anonymous false
+    password_file /etc/mosquitto/passwd
+    listener 1883
